@@ -1,0 +1,10 @@
+Rede Docker: Bridge vs Host
+
+Aspecto                          | Bridge                          | Host (Linux)
+---------------------------------|---------------------------------|-----------------------------
+Portas no container               | Isoladas; precisa mapear -p     | Compartilham as portas do host diretamente
+Necessidade de -p                 | Sim                             | Não
+Isolamento de rede                | Container separado, rede própria| Container usa a rede do host
+Conflito de portas                | Risco mínimo; portas isoladas   | Pode haver conflito se porta do host já estiver em uso
+Comunicação entre containers      | Via nome do container na mesma rede bridge | Usam host network; comunicação direta com rede do host
+Suporte no Windows/Mac            | Total                           | Parcial ou não suportado (Docker Desktop roda em VM)
