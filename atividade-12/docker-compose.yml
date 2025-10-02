@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:16
+    container_name: postgres_db
+    environment:
+      POSTGRES_PASSWORD: pass
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - app_net
+
+  web:
+    image: nginx:latest
+    container_name: nginx_web
+    ports:
+      - "8080:80"
+    networks:
+      - app_net
+
+volumes:
+  pgdata:
+
+networks:
+  app_net:
