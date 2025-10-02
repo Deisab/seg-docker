@@ -1,0 +1,286 @@
+PS C:\Users\Unicred\Desktop\docker\seg-docker\atividade-09> curl http://localhost:8081/
+   
+
+StatusCode        : 200
+StatusDescription : OK
+Content           : OlÃ¡ do Nginx via bind mount!
+RawContent        : HTTP/1.1 200 OK
+                    Connection: keep-alive
+                    Content-Length: 29
+                    Content-Type: text/plain
+                    Date: Thu, 02 Oct 2025 19:37:33 GMT
+                    Server: nginx/1.29.1
+
+                    OlÃ¡ do Nginx via bind mount!
+Forms             : {}
+Headers           : {[Connection, keep-alive], [Content-Length, 29], [Content-Type, text/plain], [Date, Thu, 02 Oct 2025 19:37:33 GMT]...}
+Images            : {}
+InputFields       : {}
+Links             : {}
+ParsedHtml        : mshtml.HTMLDocumentClass
+RawContentLength  : 29
+
+
+                                                            docker inspect webconf
+>> C:\Users\Unicred\Desktop\docker\seg-docker\atividade-09>
+[
+    {
+        "Id": "ee6a5493fcbdc9272bc5c394bfac42f23a89e28f3b362633070775828d6644ac",
+        "Created": "2025-10-02T19:37:28.875890248Z",
+        "Path": "/docker-entrypoint.sh",
+        "Args": [
+            "nginx",
+            "-g",
+            "daemon off;"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 1904,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2025-10-02T19:37:29.003237926Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:8adbdcb969e2676478ee2c7ad333956f0c8e0e4c5a7463f4611d7a2e7a7ff5dc",
+        "ResolvConfPath": "/var/lib/docker/containers/ee6a5493fcbdc9272bc5c394bfac42f23a89e28f3b362633070775828d6644ac/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/ee6a5493fcbdc9272bc5c394bfac42f23a89e28f3b362633070775828d6644ac/hostname",
+        "HostsPath": "/var/lib/docker/containers/ee6a5493fcbdc9272bc5c394bfac42f23a89e28f3b362633070775828d6644ac/hosts",
+        "LogPath": "/var/lib/docker/containers/ee6a5493fcbdc9272bc5c394bfac42f23a89e28f3b362633070775828d6644ac/ee6a5493fcbdc9272bc5c394bfac42f23a89e28f3b362633070775828d6644ac-json.log",
+        "Name": "/webconf",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "C:\\Users\\Unicred\\Desktop\\docker\\seg-docker\\atividade-09/nginx.conf:/etc/nginx/nginx.conf:ro"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "bridge",
+            "PortBindings": {
+                "80/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "8081"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                11,
+                160
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": [],
+            "BlkioDeviceWriteBps": [],
+            "BlkioDeviceReadIOps": [],
+            "BlkioDeviceWriteIOps": [],
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": [],
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware",
+                "/sys/devices/virtual/powercap"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": null,
+            "Name": "overlayfs"
+        },
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "C:\\Users\\Unicred\\Desktop\\docker\\seg-docker\\atividade-09/nginx.conf",
+                "Destination": "/etc/nginx/nginx.conf",
+                "Mode": "ro",
+                "RW": false,
+                "Propagation": "rprivate"
+            }
+        ],
+        "Config": {
+            "Hostname": "ee6a5493fcbd",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "80/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "NGINX_VERSION=1.29.1",
+                "NJS_VERSION=0.9.1",
+                "NJS_RELEASE=1~bookworm",
+                "PKG_RELEASE=1~bookworm",
+                "DYNPKG_RELEASE=1~bookworm"
+            ],
+            "Cmd": [
+                "nginx",
+                "-g",
+                "daemon off;"
+            ],
+            "Image": "nginx",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": [
+                "/docker-entrypoint.sh"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "maintainer": "NGINX Docker Maintainers \u003cdocker-maint@nginx.com\u003e"
+            },
+            "StopSignal": "SIGQUIT"
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "56f64c8e9a92bd99e213834f923cdc073d7476970749ef3b3f634bd17e50bde9",
+            "SandboxKey": "/var/run/docker/netns/56f64c8e9a92",
+            "Ports": {
+                "80/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "8081"
+                    },
+                    {
+                        "HostIp": "::",
+                        "HostPort": "8081"
+                    }
+                ]
+            },
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "a3483a27f452dda3399dd482b8876f2a53bd13579113be9a396c531c0bd3a24a",
+            "Gateway": "172.17.0.1",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "172.17.0.3",
+            "IPPrefixLen": 16,
+            "IPv6Gateway": "",
+            "MacAddress": "56:4e:86:a2:fb:66",
+            "Networks": {
+                "bridge": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "MacAddress": "56:4e:86:a2:fb:66",
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "2fbbb3d998ca63486fe8f0ffb980bb65fcda2581d40fb6055836b7a0035eeeae",
+                    "EndpointID": "a3483a27f452dda3399dd482b8876f2a53bd13579113be9a396c531c0bd3a24a",
+                    "Gateway": "172.17.0.1",
+                    "IPAddress": "172.17.0.3",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": null
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:17ae566734b63632e543c907ba74757e0c1a25d812ab9f10a07a6bed98dd199c",
+            "size": 2292,
+            "annotations": {
+                "com.docker.official-images.bashbrew.arch": "amd64",
+                "org.opencontainers.image.base.digest": "sha256:48fa1e32d5ad897f7748b4b67d1ffb9e2ec46f4129f037afa3456a99f937203a",
+                "org.opencontainers.image.base.name": "debian:bookworm-slim",
+                "org.opencontainers.image.created": "2025-09-29T23:55:17Z",
+                "org.opencontainers.image.revision": "5a4ad48c733b365d69a4d1c9946a9d8480469c7f",
+                "org.opencontainers.image.source": "https://github.com/nginx/docker-nginx.git#5a4ad48c733b365d69a4d1c9946a9d8480469c7f:mainline/debian",        
+                "org.opencontainers.image.url": "https://hub.docker.com/_/nginx",
+                "org.opencontainers.image.version": "1.29.1"
+            },
+            "platform": {
+                "architecture": "amd64",
+                "os": "linux"
+            }
+        }
+    }
+]
+PS C:\Users\Unicred\Desktop\docker\seg-docker\atividade-09>
