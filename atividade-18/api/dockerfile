@@ -1,0 +1,23 @@
+FROM node:20-alpine
+
+# Criar usuário não-root (alpine usa adduser e addgroup)
+RUN addgroup -S appgroup && adduser -S appuser -G appgroup
+
+WORKDIR /app
+
+# Copiar package.json e instalar dependências
+COPY package*.json ./
+RUN npm install
+
+# Copiar restante da aplicação
+COPY . .
+
+# Ajustar permissões do diretório para o usuário appuser
+RUN chown -R appuser:appgroup /app
+
+# Rodar como usuário não-root
+USER appuser
+
+EXPOSE 3000
+
+CMD ["node", "index.js"]
